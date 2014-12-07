@@ -1,4 +1,6 @@
-esp8266GUI
+##esp8266GUI
 ==========
 
-esp8266GUI based on esphttpd by sprite_tm at http://git.spritesserver.nl/esphttpd.git/
+esp8266GUI is responsive UI created for ESP8266 with the help of tweeter bootstrap. [http://getbootstrap.com/]
+Actual soirce code is the work by (esphttpd) sprite_tm at http://git.spritesserver.nl/esphttpd.git/
+
