@@ -103,7 +103,7 @@
 		</p>
 
 		<div class="text-center">
-			<img src="%ledstate%.png" alt="" /><br /><br />
+			<img src="wait.gif" alt="LED stat" id="led_stat" /><br /><br />
 			<form method="post" action="led.cgi">
 				<input type="submit" name="led" id="led" value="0" class="btn btn-primary btn-lg btn-block">
 			</form>
@@ -135,11 +135,13 @@
 
 			if (ledState=='on')
 			{
+				$("#led_stat").attr("src","on.png");
 				$('#led').val('0');
 				console.log('true');
 
 			}else
 			{
+				$("#led_stat").attr("src","off.png");
 				$('#led').val('1');
 				console.log('false');
 			}

@@ -66,6 +66,7 @@ static const MimeMap mimeTypes[]={
 	{"jpg", "image/jpeg"},
 	{"jpeg", "image/jpeg"},
 	{"png", "image/png"},
+	{"gif", "image/gif"},
 	{"ico", "image/x-icon"},
 	{NULL, "text/html"}, //default value
 };

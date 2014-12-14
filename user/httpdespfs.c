@@ -47,6 +47,21 @@ int ICACHE_FLASH_ATTR cgiEspFsHook(HttpdConnData *connData) {
 		connData->cgiData=file;
 		httpdStartResponse(connData, 200);
 		httpdHeader(connData, "Content-Type", httpdGetMimetype(connData->url));
+
+//Modification : bkrajendra		
+		char *url;
+		url = connData->url;
+		//Go find the extension
+		char *ext=url+(strlen(url)-1);
+		while (ext!=url && *ext!='.') ext--;
+		if (*ext=='.') ext++;
+
+		if (os_strcmp(ext, "css")==0 || os_strcmp(ext, "js")==0)
+		{
+			httpdHeader(connData, "Content-Encoding", "gzip");
+		}
+//Modification : bkrajendra			
+
 		httpdEndHeaders(connData);
 		return HTTPD_CGI_MORE;
 	}
